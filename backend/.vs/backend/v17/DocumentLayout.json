@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\application\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\application\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\domain\\refresco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\domain\\refresco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\domain\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\domain\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\domain\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\domain\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\application\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\application\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\api\\inventariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\api\\inventariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\domain\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\domain\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\api\\pagocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\domain\\moneda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\domain\\moneda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\domain\\refresco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\domain\\refresco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -58,20 +58,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "InventarioService.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Application\\InventarioService.cs",
               "RelativeDocumentMoniker": "backend\\Application\\InventarioService.cs",
               "ToolTip": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Application\\InventarioService.cs",
               "RelativeToolTip": "backend\\Application\\InventarioService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T19:07:34.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Moneda.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Domain\\Moneda.cs",
               "RelativeDocumentMoniker": "backend\\Domain\\Moneda.cs",
@@ -79,12 +79,11 @@
               "RelativeToolTip": "backend\\Domain\\Moneda.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T18:36:01.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T18:36:01.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Recibo.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Domain\\Recibo.cs",
               "RelativeDocumentMoniker": "backend\\Domain\\Recibo.cs",
@@ -92,12 +91,11 @@
               "RelativeToolTip": "backend\\Domain\\Recibo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T18:33:27.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T18:33:27.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Compra.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Domain\\Compra.cs",
               "RelativeDocumentMoniker": "backend\\Domain\\Compra.cs",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "backend\\Domain\\Compra.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T18:33:16.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T18:33:16.211Z"
             },
             {
               "$type": "Document",
@@ -116,7 +113,7 @@
               "RelativeDocumentMoniker": "backend\\API\\InventarioController.cs",
               "ToolTip": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\API\\InventarioController.cs",
               "RelativeToolTip": "backend\\API\\InventarioController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T18:31:15.205Z",
               "EditorCaption": ""
@@ -129,27 +126,27 @@
               "RelativeDocumentMoniker": "backend\\Domain\\Inventario.cs",
               "ToolTip": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Domain\\Inventario.cs",
               "RelativeToolTip": "backend\\Domain\\Inventario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T18:11:22.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Refresco.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Domain\\Refresco.cs",
               "RelativeDocumentMoniker": "backend\\Domain\\Refresco.cs",
               "ToolTip": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Domain\\Refresco.cs",
               "RelativeToolTip": "backend\\Domain\\Refresco.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-12T18:10:53.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PagoController.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\API\\PagoController.cs",
               "RelativeDocumentMoniker": "backend\\API\\PagoController.cs",
@@ -157,8 +154,7 @@
               "RelativeToolTip": "backend\\API\\PagoController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T17:49:12.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T17:49:12.577Z"
             },
             {
               "$type": "Document",
@@ -180,7 +176,7 @@
               "RelativeDocumentMoniker": "backend\\Program.cs",
               "ToolTip": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Program.cs",
               "RelativeToolTip": "backend\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-11T16:41:35.645Z",
               "EditorCaption": ""

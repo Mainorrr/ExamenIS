@@ -233,17 +233,28 @@ async function comprar() {
   compraRealizada.value = true
 }
 
-function cargarProductos() {
-  // TODO: Cambiar esto para que sea un llamado al backend
-  const datosBackend = [
-    { nombre: 'Coca Cola', precio: 800, stock: 10, cantidad: 0 },
-    { nombre: 'Fanta', precio: 950, stock: 10, cantidad: 0 },
-    { nombre: 'Pepsi', precio: 750, stock: 8, cantidad: 0 },
-    { nombre: 'Sprite', precio: 975, stock: 15, cantidad: 0 },
-  ]
+async function cargarProductos() {
+  try {
+    const response = await fetch('https://localhost:7093/api/Inventario/Refrescos')
+    if (!response.ok) throw new Error('Error al cargar productos del backend')
 
-  productos.splice(0, productos.length)
-  datosBackend.forEach(p => productos.push(p))
+    const refrescos = await response.json()
+
+    // Limpiar almacenamiento de productos previo
+    productos.splice(0, productos.length)
+
+    // Guardar los refrescos y sus atributos
+    refrescos.forEach(r => {
+      productos.push({
+        nombre: r.nombre,
+        precio: r.precio,
+        stock: r.cantidad,
+        cantidad: 0
+      })
+    })
+  } catch (error) {
+    mostrarError('Error de conexión', 'No se pudieron cargar los productos del backend.')
+  }
 }
 
 onMounted(() => {
