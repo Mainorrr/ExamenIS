@@ -4,7 +4,8 @@
     {
         public List<Refresco> refrescos;
         public List<Moneda> monedas; // Usadas para vuelto
-        public Inventario()
+        public Inventario() {}
+        public void Init()
         {
             refrescos = new List<Refresco>
             {

@@ -20,7 +20,12 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddScoped<InventarioService>();
+// Se usa singleton para que sea el mismo en cada request
+var inventario = new Inventario();
+inventario.Init();
+builder.Services.AddSingleton<Inventario>(inventario);
+builder.Services.AddSingleton<InventarioService>();
+
 
 var app = builder.Build();
 

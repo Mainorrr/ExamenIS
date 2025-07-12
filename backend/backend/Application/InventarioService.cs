@@ -6,16 +6,31 @@ namespace backend.Application
     public class InventarioService
     {
         public Inventario inventario;
-        public InventarioService()
+        public InventarioService(Inventario inventario)
         {
-            inventario = new Inventario();
+            this.inventario = inventario;
         }
         public List<Refresco> GetRefrescos()
         {
             return inventario.refrescos;
         }
+        public void ImprimirEstadoInventario(string desc)
+        {  
+            Console.WriteLine($"==== {desc} ====");
+            Console.WriteLine("Estado del inventario de refrescos:");
+            foreach (var refresco in inventario.refrescos)
+            {
+                Console.WriteLine($"- {refresco.nombre}: precio={refresco.precio}, cantidad={refresco.cantidad}");
+            }
+            Console.WriteLine("Estado del inventario de monedas:");
+            foreach (var moneda in inventario.monedas)
+            {
+                Console.WriteLine($"- {moneda.nombre}: valor={moneda.valor}, cantidad={moneda.cantidad}");
+            }
+        }
         public Recibo Facturar(Compra compra)
         {
+            ImprimirEstadoInventario("Antes de efectuar compra");
             if (!HayMonedas())
             {
                 return new Recibo(new List<Moneda>(), CodigoError.FueraDeServicio);
@@ -23,20 +38,19 @@ namespace backend.Application
 
             int totalCompra = CalcularTotalCompra(compra);
             int totalPagado = CalcularTotalPagado(compra);
-
             int vuelto = totalPagado - totalCompra;
+
             List<Moneda> monedasVuelto = new List<Moneda>();
 
-            // Intentar dar vuelto con las monedas del inventario
-            foreach (var monedaInventario in inventario.monedas)
+            foreach (var monedaInventario in inventario.monedas.OrderByDescending(m => m.valor))
             {
                 if (monedaInventario.valor > 500)
                 {
-                    continue; // Saltar billete de 1000
+                    continue; // Omitir 1000 colones
                 }
                 if (vuelto == 0)
                 {
-                    break; // Pago completo
+                    break;
                 }
 
                 int cantidadNecesaria = vuelto / monedaInventario.valor;
@@ -54,16 +68,18 @@ namespace backend.Application
 
             if (MonedasInsuficientes(vuelto))
             {
-                // Reestablecer monedas descontadas en el inventario
                 ReestablecerMonedas(monedasVuelto);
                 return new Recibo(new List<Moneda>(), CodigoError.SinCambio);
             }
 
-            // Agregar el pago del usuario para vueltos
+            // Actualizar inventario de maquina expendedora
             AgregarPago(compra.monedas);
+            RestarRefrescos(compra.refrescos);
 
+            ImprimirEstadoInventario("Luego de efectuar compra");
             return new Recibo(monedasVuelto, CodigoError.Ninguno);
         }
+
         private void ReestablecerMonedas(List<Moneda> monedas)
         {
             foreach (var moneda in monedas)
@@ -75,6 +91,17 @@ namespace backend.Application
                         inventarioMoneda.cantidad += moneda.cantidad;
                         break;
                     }
+                }
+            }
+        }
+        private void RestarRefrescos(List<Refresco> refrescosComprados)
+        {
+            foreach (var compraRefresco in refrescosComprados)
+            {
+                var refrescoInventario = inventario.refrescos.FirstOrDefault(r => r.nombre == compraRefresco.nombre);
+                if (refrescoInventario != null)
+                {
+                    refrescoInventario.cantidad -= compraRefresco.cantidad;
                 }
             }
         }

@@ -18,5 +18,10 @@ namespace backend.Controllers
         {
             return inventarioService.GetRefrescos();
         }
+        [HttpPost("Compra")]
+        public Recibo Facturar(Compra compra)
+        {
+            return inventarioService.Facturar(compra);
+        }
     }
 }

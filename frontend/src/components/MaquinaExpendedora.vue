@@ -166,22 +166,58 @@ function totalPagado() {
          pago.moneda25 * 25
 }
 
-async function obtenerDesglose(pago, productos, cambio) {
-  // TODO: Cambiar esta logica por una llamada al backend con pago y productos
-
-  const monedas = [1000, 500, 100, 50, 25]
-  const desglose = {}
-  let restante = cambio
-
-  for (const val of monedas) {
-    const cantidad = Math.floor(restante / val)
-    if (cantidad > 0) {
-      desglose[val] = cantidad
-      restante -= cantidad * val
+async function obtenerDesglose(pago, productos) {
+  try {
+    const compra = {
+      refrescos: productos.map(p => ({
+        nombre: p.nombre,
+        precio: p.precio,
+        cantidad: p.cantidad
+      })),
+      monedas: [
+        { valor: 1000, nombre: "Mil", cantidad: pago.billete1000 },
+        { valor: 500, nombre: "Quinientos", cantidad: pago.moneda500 },
+        { valor: 100, nombre: "Cien", cantidad: pago.moneda100 },
+        { valor: 50, nombre: "Cincuenta", cantidad: pago.moneda50 },
+        { valor: 25, nombre: "Veinticinco", cantidad: pago.moneda25 }
+      ]
     }
-  }
 
-  return restante > 0 ? null : desglose
+    const response = await fetch('https://localhost:7093/api/Inventario/Compra', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(compra)
+    })
+
+    if (!response.ok) throw new Error('Error al comunicarse con el backend.')
+
+    const recibo = await response.json()
+    
+    console.log('Recibo:', recibo)
+
+
+    // Manejo de errores del recibo
+    switch (recibo.error) {
+      case 1: // Fuera de servicio
+        mostrarError('Fuera de servicio', 'La máquina expendedora no tiene monedas en este momento.')
+        return null
+      case 2: // Sin cambio
+        mostrarError('Sin cambio', 'La máquina tiene monedas, pero no puede dar el vuelto exacto.')
+        return null
+      case 0:
+      default: {
+        const desglose = {}
+        for (const moneda of recibo.monedas) {
+          desglose[moneda.valor] = moneda.cantidad
+        }
+        return desglose
+      }
+    }
+  } catch (error) {
+    mostrarError('Error de conexión', 'Ocurrió un error al obtener el desglose del backend.')
+    console.error(error)
+    return null
+  }
 }
 
 async function comprar() {
@@ -199,39 +235,39 @@ async function comprar() {
   }
 
   const cambio = pagado - totalPagar.value
-  const desglose = await obtenerDesglose(pago, productosSeleccionados.value, cambio)
+  const desglose = await obtenerDesglose(pago, productosSeleccionados.value)
 
-  if (!desglose) {
-    mostrarError(
-      'Fuera de servicio',
-      'La máquina expendedora no tiene vuelto en este momento.'
-    )
-    return
-  }
+  // Si el backend devuelve null, ya se mostró el error correspondiente
+  if (!desglose) return
 
-  // Guardar el pago confirmado para que se mantengan los cambios en pantalla
+  // Guardar el pago confirmado
   Object.assign(pagoConfirmado, pago)
   vuelto.value = cambio
 
-  // Actualizar el desglose con los nuevos calculos
-  for (const key in desgloseVuelto) delete desgloseVuelto[key]
-  for (const key in desglose) desgloseVuelto[key] = desglose[key]
+  // Actualizar el desglose en pantalla
+  Object.keys(desgloseVuelto).forEach(key => delete desgloseVuelto[key])
+  Object.entries(desglose).forEach(([key, val]) => {
+    desgloseVuelto[key] = val
+  })
 
-  // Guardar los productos confirmados para que se mantengan los cambios en pantalla
+  // Guardar productos seleccionados
   productosConfirmados.value = productosSeleccionados.value.map(prod => ({
     nombre: prod.nombre,
     cantidad: prod.cantidad
   }))
 
-  // Reiniciar pago del usuario
-  for (const key in pago) {
+  // Reiniciar el pago
+  Object.keys(pago).forEach(key => {
     pago[key] = 0
-  }
+  })
 
-  // Actualizar inventario con el backend
-  cargarProductos()
+  // Actualizar productos desde el backend
+  await cargarProductos()
+
+  // Marcar como realizada la compra
   compraRealizada.value = true
 }
+
 
 async function cargarProductos() {
   try {

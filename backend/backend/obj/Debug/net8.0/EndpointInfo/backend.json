@@ -43,10 +43,10 @@
         }
       }
     },
-    "/api/Pago/Compra": {
+    "/api/Inventario/Compra": {
       "post": {
         "tags": [
-          "Pago"
+          "Inventario"
         ],
         "requestBody": {
           "content": {
@@ -96,10 +96,57 @@
     "schemas": {
       "Compra": {
         "type": "object",
+        "properties": {
+          "refrescos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Refresco"
+            },
+            "nullable": true
+          },
+          "monedas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Moneda"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Moneda": {
+        "type": "object",
+        "properties": {
+          "valor": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidad": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
         "additionalProperties": false
       },
       "Recibo": {
         "type": "object",
+        "properties": {
+          "monedas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Moneda"
+            },
+            "nullable": true
+          },
+          "error": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
         "additionalProperties": false
       },
       "Refresco": {
