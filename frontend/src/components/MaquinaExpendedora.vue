@@ -223,6 +223,11 @@ async function comprar() {
     cantidad: prod.cantidad
   }))
 
+  // Reiniciar pago del usuario
+  for (const key in pago) {
+    pago[key] = 0
+  }
+
   // Actualizar inventario con el backend
   cargarProductos()
   compraRealizada.value = true
