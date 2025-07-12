@@ -8,8 +8,8 @@
     }
     public class Recibo
     {
-        List<Moneda> monedas;
-        int error;
+        public List<Moneda> monedas;
+        public int error;
         public Recibo(List<Moneda> monedas, CodigoError error)
         {
             this.monedas = monedas;
