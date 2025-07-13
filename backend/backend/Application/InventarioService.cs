@@ -137,7 +137,7 @@ namespace backend.Application
             }
             return total;
         }
-        private bool HayMonedas()
+        public bool HayMonedas()
         {
             foreach (Moneda moneda in inventario.monedas)
             {
@@ -148,7 +148,7 @@ namespace backend.Application
             }
             return false;
         }
-        private bool MonedasInsuficientes(int vuelto)
+        public bool MonedasInsuficientes(int vuelto)
         {
             return vuelto > 0;
         }

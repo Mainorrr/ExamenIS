@@ -237,7 +237,7 @@ async function comprar() {
   const cambio = pagado - totalPagar.value
   const desglose = await obtenerDesglose(pago, productosSeleccionados.value)
 
-  // Si el backend devuelve null, ya se mostró el error correspondiente
+  // Si hubo error en el backend detener compra
   if (!desglose) return
 
   // Guardar el pago confirmado
