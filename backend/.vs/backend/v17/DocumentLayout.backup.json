@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52B9A25F-FFBB-4C2A-AD05-D989A93681B3}|UnitTesting\\UnitTesting.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\unittesting\\facturartests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52B9A25F-FFBB-4C2A-AD05-D989A93681B3}|UnitTesting\\UnitTesting.csproj|solutionrelative:unittesting\\facturartests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52B9A25F-FFBB-4C2A-AD05-D989A93681B3}|UnitTesting\\UnitTesting.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\unittesting\\inventarioservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52B9A25F-FFBB-4C2A-AD05-D989A93681B3}|UnitTesting\\UnitTesting.csproj|solutionrelative:unittesting\\inventarioservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\application\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|solutionrelative:backend\\application\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52B9A25F-FFBB-4C2A-AD05-D989A93681B3}|UnitTesting\\UnitTesting.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\unittesting\\facturartests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52B9A25F-FFBB-4C2A-AD05-D989A93681B3}|UnitTesting\\UnitTesting.csproj|solutionrelative:unittesting\\facturartests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44B55620-3799-4123-A759-137A43DDA833}|backend\\backend.csproj|c:\\users\\mainor\\desktop\\examenis\\backend\\backend\\domain\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,42 +62,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FacturarTests.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\UnitTesting\\FacturarTests.cs",
               "RelativeDocumentMoniker": "UnitTesting\\FacturarTests.cs",
               "ToolTip": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\UnitTesting\\FacturarTests.cs",
               "RelativeToolTip": "UnitTesting\\FacturarTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-13T00:12:05.341Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "InventarioServiceTests.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\UnitTesting\\InventarioServiceTests.cs",
               "RelativeDocumentMoniker": "UnitTesting\\InventarioServiceTests.cs",
               "ToolTip": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\UnitTesting\\InventarioServiceTests.cs",
               "RelativeToolTip": "UnitTesting\\InventarioServiceTests.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAswGAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T23:59:23.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T23:59:23.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "InventarioService.cs",
               "DocumentMoniker": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Application\\InventarioService.cs",
               "RelativeDocumentMoniker": "backend\\Application\\InventarioService.cs",
               "ToolTip": "C:\\Users\\MAINOR\\Desktop\\ExamenIS\\backend\\backend\\Application\\InventarioService.cs",
               "RelativeToolTip": "backend\\Application\\InventarioService.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAuwIQAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T19:07:34.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T19:07:34.369Z"
             },
             {
               "$type": "Document",
@@ -121,8 +119,7 @@
               "RelativeToolTip": "backend\\Domain\\Recibo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T18:33:27.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T18:33:27.091Z"
             },
             {
               "$type": "Document",
@@ -134,8 +131,7 @@
               "RelativeToolTip": "backend\\Domain\\Compra.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T18:33:16.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T18:33:16.211Z"
             },
             {
               "$type": "Document",
@@ -159,8 +155,7 @@
               "RelativeToolTip": "backend\\Domain\\Inventario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-12T18:11:22.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-12T18:11:22.753Z"
             },
             {
               "$type": "Document",
